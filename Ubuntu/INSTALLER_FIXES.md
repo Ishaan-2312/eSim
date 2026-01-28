@@ -2,10 +2,16 @@
 #The following list contains of issues listed orderwise (the order of encountering the issues)
 #The difficulty of the issues has also been listed alongside them
 
+
+
+
 #I used Oracle VM to install Ubuntu image for 25.04 version on an existing Windows System which in any case does not differ from latter Ubuntu OS used primarily.
 
 
-#Issue 1
+
+
+
+
 ##Issue 1 – eSim installer did not support Ubuntu 25.04
 
 Difficulty: Easy
@@ -26,7 +32,7 @@ To quickly enable support for Ubuntu 25.04, I updated the installer so that it t
 
 
 
-#Issue 2
+
 ##Issue 2 – KiCad installation step failing or unreliable
 
 Difficulty: Medium–High
@@ -44,7 +50,7 @@ To fix the KiCad installation problem, I switched the installer to use KiCad fro
 
 
 
-#Issue 3
+
 ##Issue 3 – KiCad library copy step failing
 
 Difficulty: Medium
@@ -64,7 +70,7 @@ To fix the KiCad library copy problem, I updated the installer logic so that it 
 
 
 
-#Issue 4
+
 ##Issue 4 – GTK3 related failure in installer
 
 Difficulty: Medium
@@ -82,7 +88,7 @@ To resolve the GTK3‑related failure, I adjusted the installer so that this che
 
 
 
-#Issue 5
+
 ##Issue 5 – NGHDL installer did not support Ubuntu 25.04
 
 Difficulty: Easy
@@ -106,7 +112,7 @@ To fix this, I extended the NGHDL installer so that Ubuntu 25.04 is treated the 
 
 
 
-#Issue 6
+
 ##Issue 6– NGHDL / GHDL LLVM backend fails to build on newer Ubuntu versions
 
 Difficulty: High
