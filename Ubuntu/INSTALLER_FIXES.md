@@ -2,11 +2,11 @@
 #The following list contains of issues listed orderwise (the order of encountering the issues)
 #The difficulty of the issues has also been listed alongside them
 
-## I used Oracle VM to install Ubuntu image for 25.04 version on an existing Windows System which in any case does not differ from latter Ubuntu OS used primarily.
+#I used Oracle VM to install Ubuntu image for 25.04 version on an existing Windows System which in any case does not differ from latter Ubuntu OS used primarily.
 
 
 #Issue 1
-Issue 1 – eSim installer did not support Ubuntu 25.04
+##Issue 1 – eSim installer did not support Ubuntu 25.04
 
 Difficulty: Easy
 Impact: High (installer could not run on new Ubuntu release)
@@ -22,8 +22,12 @@ To quickly enable support for Ubuntu 25.04, I updated the installer so that it t
 
 
 
+
+
+
+
 #Issue 2
-Issue 2 – KiCad installation step failing or unreliable
+##Issue 2 – KiCad installation step failing or unreliable
 
 Difficulty: Medium–High
 Impact: High for GUI + PCB workflow
@@ -41,7 +45,7 @@ To fix the KiCad installation problem, I switched the installer to use KiCad fro
 
 
 #Issue 3
-Issue 3 – KiCad library copy step failing
+##Issue 3 – KiCad library copy step failing
 
 Difficulty: Medium
 Impact: Medium (KiCad integration / components not available)
@@ -55,8 +59,13 @@ To fix the KiCad library copy problem, I updated the installer logic so that it 
 
 
 
+
+
+
+
+
 #Issue 4
-Issue 4 – GTK3 related failure in installer
+##Issue 4 – GTK3 related failure in installer
 
 Difficulty: Medium
 Impact: Medium–High (affects GUI components)
@@ -69,8 +78,12 @@ To resolve the GTK3‑related failure, I adjusted the installer so that this che
 
 
 
+
+
+
+
 #Issue 5
-Issue 5 – NGHDL installer did not support Ubuntu 25.04
+##Issue 5 – NGHDL installer did not support Ubuntu 25.04
 
 Difficulty: Easy
 Impact: High (NGHDL / mixed‑signal flow blocked)
@@ -78,15 +91,23 @@ Impact: High (NGHDL / mixed‑signal flow blocked)
 The NGHDL installation script shipped with eSim was also not handling Ubuntu 25.04. The script only recognised older Ubuntu versions, so on Ubuntu 25.04 it did not select any valid installation path and effectively failed to install NGHDL. Since NGHDL is required for mixed‑signal simulations in eSim, this meant that users on Ubuntu 25.04 could not use that part of the tool at all, which is a high‑impact limitation even though the underlying system was capable of running NGHDL.
 
 
-Fix for Issue 2 – Reusing Ubuntu 24.04 logic for NGHDL on Ubuntu 25.04
+
+
+
+
+Fix for Issue 5 – Reusing Ubuntu 24.04 logic for NGHDL on Ubuntu 25.04
 
 To fix this, I extended the NGHDL installer so that Ubuntu 25.04 is treated the same way as Ubuntu 24.04. In practice, the script now detects Ubuntu 25.04 and applies the same installation steps and package configuration that are already known to work on Ubuntu 24.04. This is a straightforward change, but it immediately unblocks NGHDL installation on Ubuntu 25.04 and restores mixed‑signal simulation support on that distribution.
 
 
 
 
+
+
+
+
 #Issue 6
-Issue 6– NGHDL / GHDL LLVM backend fails to build on newer Ubuntu versions
+##Issue 6– NGHDL / GHDL LLVM backend fails to build on newer Ubuntu versions
 
 Difficulty: High
 Impact: High (core mixed‑signal simulation break)
@@ -98,6 +119,10 @@ This issue is high impact because it blocks mixed‑signal simulation in eSim, a
 
 
 Fix : Made the script to temporarily use llvm-config 15 for stability and check for it and if not checked then install llvm-config-15 and point to its path in the installation script install-nghdl-24.04.sh
+
+
+
+
 
 
 
