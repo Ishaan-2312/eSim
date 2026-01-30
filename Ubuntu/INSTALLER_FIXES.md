@@ -113,7 +113,7 @@ To fix this, I extended the NGHDL installer so that Ubuntu 25.04 is treated the 
 
 
 
-##Issue 6– NGHDL / GHDL LLVM backend fails to build on newer Ubuntu versions
+##Issue 6– NGHDL / GHDL LLVM backend fails to build on newer Ubuntu versions which used llvm 20 which is not yet compatible for installation of ghdl package
 
 Difficulty: High
 Impact: High (core mixed‑signal simulation break)
@@ -124,7 +124,7 @@ On systems where this exact binary did not exist (for example, a different LLVM 
 This issue is high impact because it blocks mixed‑signal simulation in eSim, and high difficulty because it involves understanding the LLVM toolchain, version compatibility, and GHDL’s build configuration.
 
 
-Fix : Made the script to temporarily use llvm-config 15 for stability and check for it and if not checked then install llvm-config-15 and point to its path in the installation script install-nghdl-24.04.sh
+Fix : Made the script to temporarily use llvm-config 15 for stability and check for it and if not checked then install llvm-config-15 and point to its path in the installation script install-nghdl-24.04.sh. This can be updated to any other newer and stable version of llvm compatible with ghdl package.
 
 
 
