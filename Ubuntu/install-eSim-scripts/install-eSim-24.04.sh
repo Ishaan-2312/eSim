@@ -130,7 +130,7 @@ function installKicad
         echo "Installing KiCad from Flathub (org.kicad.KiCad)..."
         sudo flatpak install -y flathub org.kicad.KiCad || true
 
-        echo "KiCad Flatpak installation completed (or already present
+        echo "KiCad Flatpak installation completed (or already present"
 echo "You can launch it with: flatpak run org.kicad.KiCad"
         return 0
     fi
